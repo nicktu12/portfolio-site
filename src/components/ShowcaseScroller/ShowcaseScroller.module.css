@@ -1,0 +1,153 @@
+.wrap {
+  position: relative;
+  margin-top: var(--space-3);
+}
+
+.scroller {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+  padding-bottom: var(--space-1);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 90%;
+  scroll-snap-align: start;
+}
+
+.slide picture,
+.single-figure picture {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--rule);
+  transition: border-color var(--dur-slow) var(--ease);
+}
+
+.slide img,
+.single-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--dur-slow) var(--ease);
+}
+
+.slide:hover img {
+  transform: scale(1.012);
+}
+
+.slide:hover picture,
+.single-figure:hover picture {
+  border-color: var(--rule-strong);
+}
+
+.caption {
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+  margin-top: var(--space-1);
+}
+
+.source {
+  color: var(--ink-faint);
+  text-decoration: underline;
+}
+
+.source:hover {
+  color: var(--accent);
+}
+
+.edge-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: var(--space-1);
+  width: 48px;
+  background: linear-gradient(to right, transparent, var(--ground));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity var(--dur-base) linear;
+}
+
+.edge-fade-hidden {
+  opacity: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  color: var(--ink);
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    background var(--dur-micro) var(--ease-out);
+}
+
+.nav-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--ground-sunk);
+}
+
+.nav-button:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.nav-button:disabled {
+  color: var(--ink-ghost);
+  cursor: default;
+}
+
+.indicators {
+  display: flex;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.indicator {
+  height: 1px;
+  flex: 1;
+  background: var(--rule);
+  transition:
+    background var(--dur-base) var(--ease-out),
+    height var(--dur-base) var(--ease-out);
+}
+
+.indicator-active {
+  height: 2px;
+  background: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroller {
+    scroll-behavior: auto;
+  }
+
+  .slide:hover img {
+    transform: none;
+  }
+}

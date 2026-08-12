@@ -1,4 +1,5 @@
 import Section from '../../components/Section/Section'
+import ShowcaseScroller from '../../components/ShowcaseScroller/ShowcaseScroller'
 import { roles } from '../../content/roles'
 import { formatRange } from '../../lib/formatDate'
 import styles from './Work.module.css'
@@ -23,7 +24,18 @@ function Work() {
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
-            {/* Showcase imagery (ShowcaseScroller / Figure) arrives in Phase 4. */}
+            {role.showcase && (
+              <div className={styles.showcase}>
+                <p id={`${role.id}-showcase-note`} className={styles.showcaseNote}>
+                  {role.showcase.contributionNote}
+                </p>
+                <ShowcaseScroller
+                  ariaLabel={`${role.company} product screens`}
+                  describedById={`${role.id}-showcase-note`}
+                  items={role.showcase.items}
+                />
+              </div>
+            )}
           </article>
         ))}
       </div>

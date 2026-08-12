@@ -1,9 +1,153 @@
-import type { Role } from './types'
+import type { Role, ShowcaseGroup } from './types'
 
-// Employment roles (Zylo, StackHawk, Frontier) are populated in Phase 4,
-// alongside their showcase imagery. Turing has no imagery and renders in
-// the Community section instead of Work, so it's populated here now.
+const zyloShowcase: ShowcaseGroup = {
+  roleId: 'zylo',
+  provenance:
+    'Downloaded from zylo.com/product/ai-consumption-cost-management (Webflow CDN), self-hosted rather than hotlinked.',
+  contributionNote:
+    "Screens from Zylo's AI Consumption Cost Management product, published on zylo.com. I contributed to this product area as a frontend engineer. Design and marketing assets are Zylo's.",
+  items: [
+    {
+      id: 'zylo-ai-cost-hero',
+      image: {
+        slug: 'zylo-ai-cost-hero',
+        widths: [800, 1440],
+        intrinsic: { w: 1826, h: 1432 },
+        alt: 'Dashboard showing cost metrics: $1,154,474 billed, $2,725,256 projected, $2M commitment, 57.72 percent to commitment.',
+        formats: ['avif', 'webp', 'jpg'],
+      },
+      caption: 'AI consumption cost dashboard',
+      sourceUrl: 'https://zylo.com/product/ai-consumption-cost-management',
+      sourceLabel: 'zylo.com, 2026',
+    },
+    {
+      id: 'zylo-forecast-chart',
+      image: {
+        slug: 'zylo-forecast-chart',
+        widths: [800],
+        intrinsic: { w: 1420, h: 1224 },
+        alt: 'Line chart comparing actual and forecast costs from March to September 2025, with actual tracking below forecast.',
+        formats: ['avif', 'webp', 'jpg'],
+      },
+      caption: 'Actual vs. forecast cost tracking',
+      sourceUrl: 'https://zylo.com/product/ai-consumption-cost-management',
+      sourceLabel: 'zylo.com, 2026',
+    },
+    {
+      id: 'zylo-ops-table',
+      image: {
+        slug: 'zylo-ops-table',
+        widths: [800],
+        intrinsic: { w: 1420, h: 1299 },
+        alt: 'Table listing workspace, cost type, total payments, and status signal across a paginated list of entries.',
+        formats: ['avif', 'webp', 'jpg'],
+      },
+      caption: 'Cost operations table',
+      sourceUrl: 'https://zylo.com/product/ai-consumption-cost-management',
+      sourceLabel: 'zylo.com, 2026',
+    },
+    {
+      id: 'zylo-commitment',
+      image: {
+        slug: 'zylo-commitment',
+        widths: [800, 1440, 2200],
+        intrinsic: { w: 2880, h: 1621 },
+        alt: 'Cost management dashboard showing total billed cost, projected cost, and percent to commitment.',
+        formats: ['avif', 'webp', 'jpg'],
+      },
+      caption: 'Commitment tracking dashboard',
+      sourceUrl: 'https://zylo.com/product/ai-consumption-cost-management',
+      sourceLabel: 'zylo.com, 2026',
+    },
+  ],
+}
+
+const stackhawkShowcase: ShowcaseGroup = {
+  roleId: 'stackhawk',
+  provenance:
+    "Original Contentful CDN asset now 404s; recovered via Wayback Machine capture 2022-03-08 of stackhawk.com.",
+  contributionNote:
+    'A screen from the StackHawk platform, which I led frontend development for. Recovered via the Wayback Machine since the original asset is no longer live.',
+  items: [
+    {
+      id: 'stackhawk-app-list',
+      image: {
+        slug: 'stackhawk-app-list',
+        widths: [800, 1440, 2200],
+        intrinsic: { w: 2744, h: 1727 },
+        alt: 'The Applications list page in the StackHawk platform, showing scanned applications and their environments.',
+        formats: ['avif', 'webp', 'jpg'],
+      },
+      caption: 'Applications list, StackHawk platform',
+      sourceUrl: 'https://web.archive.org/web/20220308151324/https://www.stackhawk.com/',
+      sourceLabel: 'Wayback Machine, March 2022',
+    },
+  ],
+}
+
 export const roles: Role[] = [
+  {
+    id: 'zylo',
+    kind: 'employment',
+    company: 'Zylo',
+    companyUrl: 'https://zylo.com',
+    title: 'Senior Software Engineer',
+    location: 'Denver, Colorado (Remote)',
+    start: '2025-04',
+    end: null,
+    scope:
+      'Leads frontend architecture across core enterprise product areas, including Contract Assist, multi-org DocuSign, and Consumption Cost Management, while taking on full-stack ownership of backend services powering licensing and workflow automation.',
+    highlights: [
+      'Led frontend architecture for multi-org DocuSign integration and contributed to a full-stack Workflow Resends feature that shipped to general availability across the entire customer base, presented directly to company leadership.',
+      'Spearheaded company-wide adoption of AI-assisted engineering practices (Claude Code), leading frontend AI strategy and representing the team at internal conferences and cross-functional AI working groups.',
+      'Expanded into full-stack ownership of backend services for license modeling and workflow automation, with leadership crediting the transition with freeing up senior backend engineers to focus on new initiatives.',
+      'Directed a full-week TanStack Query v4 to v5 migration redesigning cross-app state architecture, and led complex UI work including high-performance sticky-column data tables and an accessibility overhaul of chart components.',
+      'Won a company-wide hackathon for building an automated AI-driven end-to-end testing architecture.',
+    ],
+    stack: ['React', 'TypeScript', 'Zustand', 'GraphQL', 'Node.js', 'PostgreSQL', 'AWS', 'Claude Code'],
+    showcase: zyloShowcase,
+  },
+  {
+    id: 'stackhawk',
+    kind: 'employment',
+    company: 'StackHawk',
+    companyUrl: 'https://www.stackhawk.com',
+    title: 'Frontend Engineer',
+    location: 'Denver Metropolitan Area',
+    start: '2020-02',
+    end: '2022-04',
+    scope:
+      "Led frontend development for the StackHawk platform, including React architecture, a design system, and a from-scratch rebuild of the company's marketing site.",
+    highlights: [
+      'Directed a product rebuild, achieving a 50% boost in performance and driving 100% growth in user traffic.',
+      'Implemented end-to-end testing frameworks, accelerating code release cycles by 2 days and ensuring reliable, resilient software quality.',
+      'Delivered workshops and presentations on application security automation, and actively contributed to hiring and mentoring junior engineers.',
+    ],
+    stack: ['React', 'TypeScript', 'Gatsby', 'Contentful', 'GraphQL', 'Kotlin', 'Playwright', 'Docker', 'AWS'],
+    showcase: stackhawkShowcase,
+  },
+  {
+    id: 'frontier',
+    kind: 'employment',
+    company: 'Frontier Airlines',
+    companyUrl: 'https://www.flyfrontier.com',
+    title: 'Software Developer I',
+    location: 'Denver Metropolitan Area',
+    start: '2018-03',
+    end: '2020-02',
+    scope:
+      'Developed features for the booking platform in .NET, then led the transition of the frontend to a Vue.js SPA, including a company-wide accessibility initiative with the Blind Institute of Technology.',
+    highlights: [
+      'Coordinated efforts to enhance accessibility for visually impaired users and reduced user drop-off rates by 50% on accessible web components.',
+      'Streamlined design-to-dev handoff, reducing iteration time from weeks to days.',
+      'Coached high school interns and served on a company committee for aircraft naming.',
+    ],
+    stack: ['Vue.js', 'Vuex', 'C#', '.NET', 'JavaScript', 'Webpack', 'Azure DevOps'],
+    // The archived booking SPA renders blank on Wayback replay; the real
+    // story here (accessibility, drop-off reduction) isn't something a
+    // screenshot would convey anyway.
+    showcase: null,
+  },
   {
     id: 'turing',
     kind: 'teaching',
