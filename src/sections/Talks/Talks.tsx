@@ -11,7 +11,9 @@ function Talks() {
         {talks.map((talk) => (
           <li key={talk.id} className={styles.entry}>
             <h3 className={styles.title}>
-              <ExternalLink href={talk.url}>{talk.title}</ExternalLink>
+              <ExternalLink href={talk.url} className="text-link">
+                {talk.title}
+              </ExternalLink>
             </h3>
             <p className={styles.venue}>
               {talk.venue}, {formatMonthYear(talk.date)}

@@ -16,10 +16,6 @@
   margin-bottom: var(--space-2);
 }
 
-.meta a:hover {
-  color: var(--accent);
-}
-
 .name {
   margin-bottom: var(--space-2);
 }

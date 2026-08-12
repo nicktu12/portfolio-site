@@ -11,6 +11,21 @@
   max-width: var(--measure);
 }
 
+.text-link {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition:
+    background-size var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.text-link:hover {
+  color: var(--accent);
+  background-size: 100% 1px;
+}
+
 .label {
   font-size: var(--step--1);
   font-weight: var(--weight-bold);

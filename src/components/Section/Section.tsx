@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { useReveal } from '../../hooks/useReveal'
 import styles from './Section.module.css'
 
 interface SectionProps {
@@ -9,6 +10,7 @@ interface SectionProps {
 
 function Section({ id, label, children }: SectionProps) {
   const headingId = `${id}-heading`
+  const { ref, revealed } = useReveal<HTMLDivElement>()
 
   return (
     <section id={id} aria-labelledby={headingId} className={styles.section}>
@@ -18,7 +20,14 @@ function Section({ id, label, children }: SectionProps) {
             {label}
           </h2>
         </div>
-        <div className={styles.contentCol}>{children}</div>
+        <div
+          ref={ref}
+          data-reveal=""
+          data-revealed={revealed ? '' : undefined}
+          className={styles.contentCol}
+        >
+          {children}
+        </div>
       </div>
     </section>
   )

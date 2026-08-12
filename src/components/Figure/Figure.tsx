@@ -1,4 +1,6 @@
+import { useEffect, useRef, useState } from 'react'
 import type { ImageAsset } from '../../content/types'
+import styles from './Figure.module.css'
 
 interface FigureProps {
   image: ImageAsset
@@ -9,6 +11,17 @@ interface FigureProps {
 }
 
 function Figure({ image, sizes, loading = 'lazy', fetchPriority = 'auto', className }: FigureProps) {
+  const imgRef = useRef<HTMLImageElement>(null)
+  const [loaded, setLoaded] = useState(loading === 'eager')
+
+  useEffect(() => {
+    // Images served from cache can already be complete before this effect
+    // runs, in which case onLoad never fires.
+    if (imgRef.current?.complete) {
+      setLoaded(true)
+    }
+  }, [])
+
   const base = `/media/${image.slug}`
   const largest = image.widths[image.widths.length - 1]
 
@@ -20,6 +33,7 @@ function Figure({ image, sizes, loading = 'lazy', fetchPriority = 'auto', classN
       <source type="image/avif" srcSet={avifSrcSet} sizes={sizes} />
       <source type="image/webp" srcSet={webpSrcSet} sizes={sizes} />
       <img
+        ref={imgRef}
         src={`${base}-${largest}.jpg`}
         width={image.intrinsic.w}
         height={image.intrinsic.h}
@@ -27,6 +41,8 @@ function Figure({ image, sizes, loading = 'lazy', fetchPriority = 'auto', classN
         loading={loading}
         decoding="async"
         fetchPriority={fetchPriority}
+        onLoad={() => setLoaded(true)}
+        className={loaded ? styles.loaded : styles.loading}
       />
     </picture>
   )
