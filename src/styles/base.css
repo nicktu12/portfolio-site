@@ -1,0 +1,80 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink-dim);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  font-synthesis: none;
+}
+
+h1, h2, h3 {
+  color: var(--ink);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--track-tight);
+  line-height: var(--lh-heading);
+}
+
+h1 {
+  font-size: var(--step-4);
+  line-height: var(--lh-display);
+}
+
+h2 {
+  font-size: var(--step-2);
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+a {
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+  transition: outline-offset var(--dur-micro) var(--ease-out);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid CanvasText;
+  }
+
+  .rule, .hairline {
+    border-color: CanvasText;
+  }
+}

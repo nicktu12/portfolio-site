@@ -1,0 +1,67 @@
+:root {
+  /* ground */
+  --ground: #FAFAF8;
+  --ground-sunk: #F1F1EE;
+  --ground-invert: #111114;
+
+  /* ink */
+  --ink: #111114; /* 17.6:1 on ground */
+  --ink-dim: #55555C; /* 7.3:1  body de-emphasis */
+  --ink-faint: #6E6E77; /* 5.4:1  meta, dates, captions */
+  --ink-ghost: #A3A3AA; /* 2.9:1  decorative only, never text */
+
+  /* one accent, Swiss red */
+  --accent: #C8102E; /* 5.6:1 on ground */
+  --accent-sunk: #A50D26; /* hover/active only */
+  --on-accent: #FAFAF8;
+
+  /* rules */
+  --rule: rgba(17, 17, 20, 0.12);
+  --rule-strong: rgba(17, 17, 20, 0.28);
+
+  /* measure and grid */
+  --max-w: 1120px;
+  --measure: 62ch;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --cols: 12;
+  --col-gap: clamp(1rem, 2.5vw, 2rem);
+  --grid-breakpoint: 900px;
+
+  /* space */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+  --space-5: 7rem;
+  --space-6: 11rem;
+  --section-y: clamp(4rem, 10vw, 11rem);
+
+  /* type */
+  --font: "Helvetica Neue", Helvetica, "Arial Nova", Arial, sans-serif;
+  --step--1: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem);
+  --step-0: clamp(1rem, 0.96rem + 0.20vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.50vw, 1.5rem);
+  --step-2: clamp(1.75rem, 1.48rem + 1.30vw, 2.5rem);
+  --step-3: clamp(2.5rem, 1.75rem + 3.60vw, 4.5rem);
+  --step-4: clamp(3.25rem, 1.90rem + 6.40vw, 7rem);
+
+  --lh-display: 1.02;
+  --lh-heading: 1.14;
+  --lh-body: 1.55;
+  --track-tight: -0.022em;
+  --track-label: 0.10em;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --dur-micro: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 420ms;
+  --dur-reveal: 560ms;
+
+  --radius: 2px;
+  --focus-ring: 2px solid var(--accent);
+  --focus-offset: 3px;
+}
