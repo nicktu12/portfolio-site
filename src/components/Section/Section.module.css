@@ -1,0 +1,37 @@
+.section {
+  padding-block: var(--section-y);
+  border-top: 1px solid var(--rule);
+}
+
+.grid {
+  align-items: start;
+}
+
+.label-col {
+  grid-column: 1 / -1;
+  margin-bottom: var(--space-3);
+}
+
+.content-col {
+  grid-column: 1 / -1;
+}
+
+.label {
+  margin: 0;
+  font-size: var(--step--1);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+@media (min-width: 900px) {
+  .label-col {
+    grid-column: 1 / span 3;
+    margin-bottom: 0;
+  }
+
+  .content-col {
+    grid-column: 4 / span 9;
+  }
+}

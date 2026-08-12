@@ -1,0 +1,38 @@
+.volunteer-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.entry {
+  max-width: var(--measure);
+}
+
+.entry + .entry,
+.volunteer-list .entry {
+  margin-top: var(--space-3);
+}
+
+.entry-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.entry-title {
+  font-size: var(--step-0);
+}
+
+.dates {
+  font-size: var(--step--1);
+  font-style: italic;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.scope {
+  color: var(--ink-dim);
+}

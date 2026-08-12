@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.entry {
+  max-width: var(--measure);
+}
+
+.name {
+  font-size: var(--step-1);
+}
+
+.tagline {
+  color: var(--ink-dim);
+}

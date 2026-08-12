@@ -1,0 +1,45 @@
+.header {
+  padding-block: var(--space-2);
+}
+
+.grid {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  grid-column: 1 / span 6;
+  font-size: var(--step--1);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--track-tight);
+  color: var(--ink);
+}
+
+.wordmark:hover {
+  color: var(--ink);
+}
+
+.nav {
+  grid-column: 7 / span 6;
+  justify-self: end;
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.nav-link {
+  font-size: var(--step--1);
+  color: var(--ink-dim);
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .nav-list {
+    gap: var(--space-2);
+  }
+}

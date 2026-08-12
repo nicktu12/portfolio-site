@@ -1,0 +1,65 @@
+import type { SkillGroup } from './types'
+
+export const skillGroups: SkillGroup[] = [
+  {
+    id: 'frontend',
+    label: 'Frontend',
+    items: [
+      { name: 'React', emphasis: true },
+      { name: 'TypeScript', emphasis: true },
+      { name: 'JavaScript' },
+      { name: 'Redux' },
+      { name: 'Zustand' },
+      { name: 'Vue.js' },
+      { name: 'Vuex' },
+      { name: 'GraphQL' },
+      { name: 'Gatsby' },
+      { name: 'Storybook' },
+      { name: 'HTML' },
+      { name: 'CSS' },
+      { name: 'Webpack' },
+      { name: 'Contentful' },
+      { name: 'MUI' },
+    ],
+  },
+  {
+    id: 'backend',
+    label: 'Backend & Infra',
+    items: [
+      { name: 'Node.js', emphasis: true },
+      { name: 'Ruby' },
+      { name: 'C#' },
+      { name: '.NET' },
+      { name: 'Kotlin' },
+      { name: 'PostgreSQL', emphasis: true },
+      { name: 'AWS (Lambda, CDK, DynamoDB, EventBridge)', emphasis: true },
+      { name: 'Kubernetes' },
+      { name: 'Helm' },
+      { name: 'Docker' },
+      { name: 'Azure DevOps' },
+    ],
+  },
+  {
+    id: 'ai',
+    label: 'AI/LLM',
+    items: [
+      { name: 'Claude Code', emphasis: true },
+      { name: 'OpenAI API' },
+      { name: 'Agentic development workflows' },
+      { name: 'Multi-agent orchestration' },
+    ],
+  },
+  {
+    id: 'testing',
+    label: 'Testing & Tooling',
+    items: [
+      { name: 'Jest' },
+      { name: 'Mocha/Chai' },
+      { name: 'Cypress' },
+      { name: 'Playwright' },
+      { name: 'CI/CD (GitHub Actions, Jenkins)' },
+      { name: 'Git' },
+      { name: 'Accessibility/WCAG', emphasis: true },
+    ],
+  },
+]

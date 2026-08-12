@@ -1,0 +1,18 @@
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: var(--space-2);
+  z-index: 100;
+  padding: var(--space-1) var(--space-2);
+  background: var(--ink);
+  color: var(--ground);
+  font-size: var(--step--1);
+  font-weight: var(--weight-bold);
+  border-radius: var(--radius);
+  transition: top var(--dur-micro) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  top: var(--space-2);
+  outline-offset: 4px;
+}
