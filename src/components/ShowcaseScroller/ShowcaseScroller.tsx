@@ -113,8 +113,14 @@ function ShowcaseScroller({ ariaLabel, describedById, items }: ShowcaseScrollerP
         onKeyDown={handleKeyDown}
         className={styles.scroller}
       >
-        {items.map((item) => (
-          <li key={item.id} className={styles.slide}>
+        {items.map((item, index) => (
+          <li
+            key={item.id}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`${index + 1} of ${items.length}`}
+            className={styles.slide}
+          >
             <figure>
               <Figure image={item.image} sizes="(min-width: 900px) 70vw, 90vw" />
               <figcaption className={styles.caption}>
