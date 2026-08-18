@@ -9,7 +9,6 @@ export const skillGroups: SkillGroup[] = [
       { name: 'TypeScript', emphasis: true },
       { name: 'JavaScript' },
       { name: 'Redux' },
-      { name: 'Zustand' },
       { name: 'Vue.js' },
       { name: 'Vuex' },
       { name: 'GraphQL' },

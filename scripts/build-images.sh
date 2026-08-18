@@ -68,6 +68,7 @@ process_image "$RAW_DIR/zylo/zylo-forecast-chart.avif" "zylo-forecast-chart" 142
 process_image "$RAW_DIR/zylo/zylo-ops-table.avif" "zylo-ops-table" 1420
 process_image "$RAW_DIR/zylo/zylo-commitment.avif" "zylo-commitment" 2880
 process_image "$RAW_DIR/stackhawk/stackhawk-app-list.png" "stackhawk-app-list" 2744
+process_image "$RAW_DIR/headshot/headshot.png" "headshot" 1024
 
 echo ""
 echo "done. sizes:"

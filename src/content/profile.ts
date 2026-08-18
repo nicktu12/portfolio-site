@@ -12,12 +12,11 @@ export const profile: Profile = {
     'I started as a software engineering instructor, which shapes how I mentor, communicate, and lead across technical and non-technical teams. Outside of work, I organize the Denver Music && Tech meetup.',
   ],
   headshot: {
-    slug: 'headshot-placeholder',
-    widths: [640],
-    intrinsic: { w: 640, h: 800 },
+    slug: 'headshot',
+    widths: [800],
+    intrinsic: { w: 533, h: 800 },
     alt: 'Nick Teets',
-    formats: ['svg'],
-    isPlaceholder: true,
+    formats: ['avif', 'webp', 'jpg'],
   },
   links: [
     {

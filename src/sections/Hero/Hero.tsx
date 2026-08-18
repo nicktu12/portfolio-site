@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { profile } from '../../content/profile'
 import { useReveal } from '../../hooks/useReveal'
+import Figure from '../../components/Figure/Figure'
 import styles from './Hero.module.css'
 
 function Hero() {
@@ -40,13 +41,12 @@ function Hero() {
           style={{ '--reveal-delay': '80ms' } as CSSProperties}
           className={styles.portraitWrap}
         >
-          <img
-            src={`/media/${profile.headshot.slug}.svg`}
-            alt={profile.headshot.alt}
-            width={profile.headshot.intrinsic.w}
-            height={profile.headshot.intrinsic.h}
-            className={styles.portrait}
+          <Figure
+            image={profile.headshot}
+            sizes="(min-width: 900px) 33vw, 90vw"
+            loading="eager"
             fetchPriority="high"
+            className={styles.portrait}
           />
         </div>
       </div>
