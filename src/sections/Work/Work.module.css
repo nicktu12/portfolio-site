@@ -44,6 +44,7 @@
 }
 
 .showcase {
+  max-width: var(--measure);
   margin-top: var(--space-3);
 }
 
