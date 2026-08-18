@@ -87,7 +87,7 @@ relationship — axe-core will flag this if either role is removed.
 ## Deploy
 
 GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to
-GitHub Pages on push to `master`. Pages must be configured with source
+GitHub Pages on push to `main`. Pages must be configured with source
 "GitHub Actions" (not the legacy branch-deploy mode) for this to work.
 
 ```
