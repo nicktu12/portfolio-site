@@ -67,7 +67,9 @@ process_image "$RAW_DIR/zylo/zylo-actual-vs-forecast.avif" "zylo-actual-vs-forec
 process_image "$RAW_DIR/zylo/zylo-forecast-chart.avif" "zylo-forecast-chart" 1420
 process_image "$RAW_DIR/zylo/zylo-ops-table.avif" "zylo-ops-table" 1420
 process_image "$RAW_DIR/zylo/zylo-commitment.avif" "zylo-commitment" 2880
-process_image "$RAW_DIR/stackhawk/stackhawk-app-list.png" "stackhawk-app-list" 2744
+process_image "$RAW_DIR/stackhawk/stackhawk-api-discovery.png" "stackhawk-api-discovery" 2520
+process_image "$RAW_DIR/stackhawk/stackhawk-repo-insights.png" "stackhawk-repo-insights" 2444
+process_image "$RAW_DIR/stackhawk/stackhawk-openapi-spec.png" "stackhawk-openapi-spec" 2524
 process_image "$RAW_DIR/headshot/headshot.png" "headshot" 1024
 
 echo ""

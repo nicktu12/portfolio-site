@@ -65,22 +65,48 @@ const zyloShowcase: ShowcaseGroup = {
 const stackhawkShowcase: ShowcaseGroup = {
   roleId: 'stackhawk',
   provenance:
-    "Original Contentful CDN asset now 404s; recovered via Wayback Machine capture 2022-03-08 of stackhawk.com.",
+    'Downloaded from stackhawk.com/platform (current site), self-hosted rather than hotlinked.',
   contributionNote:
-    'A screen from the StackHawk platform, which I led frontend development for. Recovered via the Wayback Machine since the original asset is no longer live.',
+    "Screens from the StackHawk platform, which I led frontend development for. Design and marketing assets are StackHawk's.",
   items: [
     {
-      id: 'stackhawk-app-list',
+      id: 'stackhawk-api-discovery',
       image: {
-        slug: 'stackhawk-app-list',
+        slug: 'stackhawk-api-discovery',
         widths: [800, 1440, 2200],
-        intrinsic: { w: 2744, h: 1727 },
-        alt: 'The Applications list page in the StackHawk platform, showing scanned applications and their environments.',
+        intrinsic: { w: 2200, h: 1379 },
+        alt: 'API Discovery dashboard showing 201 repositories, 156 total attack surface, 61 percent mapped, and 49 percent tested coverage.',
         formats: ['avif', 'webp', 'jpg'],
       },
-      caption: 'Applications list, StackHawk platform',
-      sourceUrl: 'https://web.archive.org/web/20220308151324/https://www.stackhawk.com/',
-      sourceLabel: 'Wayback Machine, March 2022',
+      caption: 'API discovery and attack surface mapping',
+      sourceUrl: 'https://www.stackhawk.com/platform',
+      sourceLabel: 'stackhawk.com, 2026',
+    },
+    {
+      id: 'stackhawk-repo-insights',
+      image: {
+        slug: 'stackhawk-repo-insights',
+        widths: [800, 1440, 2200],
+        intrinsic: { w: 2200, h: 1391 },
+        alt: 'Repo Insights table listing repositories with frameworks detected, sensitive data tags, and last commit activity.',
+        formats: ['avif', 'webp', 'jpg'],
+      },
+      caption: 'Repo insights: frameworks, sensitive data, and commit activity',
+      sourceUrl: 'https://www.stackhawk.com/platform',
+      sourceLabel: 'stackhawk.com, 2026',
+    },
+    {
+      id: 'stackhawk-openapi-spec',
+      image: {
+        slug: 'stackhawk-openapi-spec',
+        widths: [800, 1440, 2200],
+        intrinsic: { w: 2200, h: 1433 },
+        alt: 'OpenAPI Spec Generation panel showing an AI-generated spec with endpoint paths and summaries for a sample application.',
+        formats: ['avif', 'webp', 'jpg'],
+      },
+      caption: 'AI-generated OpenAPI spec',
+      sourceUrl: 'https://www.stackhawk.com/platform',
+      sourceLabel: 'stackhawk.com, 2026',
     },
   ],
 }
