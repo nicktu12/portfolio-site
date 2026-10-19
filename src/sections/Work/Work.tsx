@@ -33,6 +33,7 @@ function Work() {
                   ariaLabel={`${role.company} product screens`}
                   describedById={`${role.id}-showcase-note`}
                   items={role.showcase.items}
+                  frameRatio={role.showcase.frameRatio}
                 />
               </div>
             )}

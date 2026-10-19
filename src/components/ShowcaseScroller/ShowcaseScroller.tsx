@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from 'react'
+import { useCallback, useEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react'
 import Figure from '../Figure/Figure'
 import ExternalLink from '../ExternalLink/ExternalLink'
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
@@ -9,9 +9,10 @@ interface ShowcaseScrollerProps {
   ariaLabel: string
   describedById?: string
   items: ShowcaseItem[]
+  frameRatio?: string
 }
 
-function ShowcaseScroller({ ariaLabel, describedById, items }: ShowcaseScrollerProps) {
+function ShowcaseScroller({ ariaLabel, describedById, items, frameRatio }: ShowcaseScrollerProps) {
   const listRef = useRef<HTMLUListElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const [canScrollNext, setCanScrollNext] = useState(items.length > 1)
@@ -111,7 +112,8 @@ function ShowcaseScroller({ ariaLabel, describedById, items }: ShowcaseScrollerP
         aria-describedby={describedById}
         tabIndex={0}
         onKeyDown={handleKeyDown}
-        className={styles.scroller}
+        className={frameRatio ? `${styles.scroller} ${styles.framed}` : styles.scroller}
+        style={frameRatio ? ({ '--frame-ratio': frameRatio } as CSSProperties) : undefined}
       >
         {items.map((item, index) => (
           <li

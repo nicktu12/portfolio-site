@@ -54,6 +54,12 @@ export interface ShowcaseGroup {
   roleId: string
   provenance: string
   contributionNote: string
+  /**
+   * Optional CSS aspect-ratio (e.g. '4 / 3') applied to every slide frame.
+   * Set it when a group's source images have mismatched shapes; images are
+   * center-cropped to fill the frame.
+   */
+  frameRatio?: string
   items: ShowcaseItem[]
 }
 

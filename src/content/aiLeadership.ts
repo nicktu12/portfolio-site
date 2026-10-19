@@ -2,7 +2,7 @@ import type { AiLeadershipContent } from './types'
 
 export const aiLeadership: AiLeadershipContent = {
   intro: [
-    'I lead frontend AI strategy at Zylo, driving company-wide adoption of AI-assisted engineering practices rather than just using the tools myself.',
+    'I lead AI engineering strategy at Zylo, driving company-wide adoption of AI-assisted engineering practices rather than just using the tools myself.',
   ],
   highlights: [
     'Led company-wide adoption of Claude Code across the engineering org, from individual workflow habits to team-level practice.',

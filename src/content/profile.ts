@@ -6,9 +6,9 @@ export const profile: Profile = {
   company: { name: 'Zylo', url: 'https://zylo.com' },
   location: 'Denver, Colorado',
   positioning:
-    'Senior software engineer building frontend systems that scale, leading AI-driven engineering practice, and going wherever the problem lives.',
+    'Senior software engineer building web applications that scale, leading AI-driven engineering practice, and going wherever the problem lives.',
   summary: [
-    'I lead frontend architecture for enterprise platforms, most recently at Zylo, where I also lead the team’s adoption of AI-assisted engineering practices and take on backend ownership when the problem calls for it.',
+    'I build and architect enterprise web applications across the stack, most recently at Zylo, where I also lead the team’s adoption of AI-assisted engineering practices.',
     'I started as a software engineering instructor, which shapes how I mentor, communicate, and lead across technical and non-technical teams. Outside of work, I organize the Denver Music && Tech meetup.',
   ],
   headshot: {

@@ -5,7 +5,8 @@ const zyloShowcase: ShowcaseGroup = {
   provenance:
     'Downloaded from zylo.com/product/ai-consumption-cost-management (Webflow CDN), self-hosted rather than hotlinked.',
   contributionNote:
-    "Screens from Zylo's AI Consumption Cost Management product, published on zylo.com. I contributed to this product area as a frontend engineer. Design and marketing assets are Zylo's.",
+    "Screens from Zylo's AI Consumption Cost Management product, published on zylo.com. I helped build this product area as a senior engineer. Design and marketing assets are Zylo's.",
+  frameRatio: '4 / 3',
   items: [
     {
       id: 'zylo-ai-cost-hero',
@@ -125,7 +126,7 @@ export const roles: Role[] = [
       'Leads frontend architecture across core enterprise product areas, including Contract Assist, multi-org DocuSign, and Consumption Cost Management, while taking on full-stack ownership of backend services powering licensing and workflow automation.',
     highlights: [
       'Led frontend architecture for multi-org DocuSign integration and contributed to a full-stack Workflow Resends feature that shipped to general availability across the entire customer base, presented directly to company leadership.',
-      'Spearheaded company-wide adoption of AI-assisted engineering practices (Claude Code), leading frontend AI strategy and representing the team at internal conferences and cross-functional AI working groups.',
+      'Spearheaded company-wide adoption of AI-assisted engineering practices (Claude Code), leading AI engineering strategy and representing the team at internal conferences and cross-functional AI working groups.',
       'Expanded into full-stack ownership of backend services for license modeling and workflow automation, with leadership crediting the transition with freeing up senior backend engineers to focus on new initiatives.',
       'Directed a full-week TanStack Query v4 to v5 migration redesigning cross-app state architecture, and led complex UI work including high-performance sticky-column data tables and an accessibility overhaul of chart components.',
       'Won a company-wide hackathon for building an automated AI-driven end-to-end testing architecture.',

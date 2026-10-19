@@ -3,16 +3,16 @@ import type { CaseStudy } from './types'
 export const caseStudy: CaseStudy | null = {
   id: 'ai-e2e-testing',
   title: 'An AI-driven end-to-end testing system',
-  dek: 'Spearheading AI adoption on the frontend team at Zylo, I built a system where Claude writes and maintains Playwright end-to-end tests automatically, from pull request to nightly regression to triage.',
+  dek: 'Spearheading AI adoption across engineering at Zylo, I built a system where Claude writes and maintains Playwright end-to-end tests automatically, from pull request to nightly regression to triage.',
   role: 'Senior Software Engineer, Frontend AI Lead',
   timeframe: 'Early 2026',
   stack: ['Claude Code', 'Playwright', 'GitHub Actions', 'GitHub Issues'],
   sections: [
     {
       id: 'context',
-      heading: 'Leading AI adoption on the frontend team',
+      heading: 'Leading AI adoption across engineering',
       body: [
-        'Spearheading AI adoption on the frontend team meant more than using AI tools myself. It meant building the skills, workflows, and operating procedures the rest of the team could use for AI-assisted frontend development.',
+        'Spearheading AI adoption on the team meant more than using AI tools myself. It meant building the skills, workflows, and operating procedures the rest of the team could use for AI-assisted development.',
         "One of the most valuable pieces of that work was an automated end-to-end testing system built with Claude and Playwright. It started as a hackathon project, and my team's win earned us follow-up time at a second hackathon to develop it into the version running today.",
       ],
     },

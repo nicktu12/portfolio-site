@@ -47,6 +47,15 @@
   transition: transform var(--dur-slow) var(--ease);
 }
 
+.framed picture {
+  aspect-ratio: var(--frame-ratio);
+}
+
+.framed img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .slide:hover img {
   transform: scale(1.012);
 }

@@ -54,7 +54,7 @@ export const skillGroups: SkillGroup[] = [
       { name: 'Mocha/Chai' },
       { name: 'Cypress' },
       { name: 'Playwright', emphasis: true },
-      { name: 'CI/CD (GitHub Actions, Jenkins)' },
+      { name: 'CI/CD (GitHub Actions)' },
       { name: 'Git' },
       { name: 'Accessibility/WCAG', emphasis: true },
     ],
