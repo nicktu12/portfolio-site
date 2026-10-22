@@ -25,7 +25,7 @@ function SiteHeader() {
               </li>
             ))}
             <li>
-              <a href={profile.resumeUrl} className={styles.resumeButton}>
+              <a href={profile.resumeUrl} className={styles.navLink}>
                 Resume<span className="visually-hidden"> (PDF)</span>
               </a>
             </li>
