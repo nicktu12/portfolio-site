@@ -1,3 +1,4 @@
+import { profile } from '../../content/profile'
 import styles from './SiteHeader.module.css'
 
 const navLinks = [
@@ -23,6 +24,11 @@ function SiteHeader() {
                 </a>
               </li>
             ))}
+            <li>
+              <a href={profile.resumeUrl} className={styles.resumeButton}>
+                Resume<span className="visually-hidden"> (PDF)</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
